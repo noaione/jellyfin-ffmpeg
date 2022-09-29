@@ -118,7 +118,9 @@ prepare_extra_common() {
 
     # FDK-AAC-STRIPPED
     pushd ${SOURCE_DIR}
-    git clone -b stripped4 --depth=1 https://gitlab.freedesktop.org/wtaymans/fdk-aac-stripped.git
+    # Use cgit version since gitlab keep dying
+    git clone -b stripped4 --depth=1 git://people.freedesktop.org/~wtay/fdk-aac fdk-aac-stripped
+    # git clone -b stripped4 --depth=1 https://gitlab.freedesktop.org/wtaymans/fdk-aac-stripped.git
     pushd fdk-aac-stripped
     ./autogen.sh
     ./configure \
