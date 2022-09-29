@@ -19,6 +19,9 @@ fi
 
 cli_release="${1}"
 case ${cli_release} in
+    'stretch')
+        release="debian:stretch"
+        gcc_version="6"
     'buster')
         release="debian:buster"
         gcc_version="8"
