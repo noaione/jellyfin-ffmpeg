@@ -22,8 +22,8 @@ jobs:
     uses: ./.github/workflows/_meta.yaml
     with:
       distro: 'debian'
-      codenames: '["buster", "bullseye"]'
-      architectures: '["amd64", "arm64", "armhf"]'
+      codenames: '["stretch"]'
+      architectures: '["amd64"]'
       release: false
 
   build_ubuntu:
